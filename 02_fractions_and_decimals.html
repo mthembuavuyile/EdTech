@@ -5,65 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Lesson 2: Fractions and Decimals - Vylex Nexys</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <style>
-        :root {
-            --primary-color: #4682b4;
-            --secondary-color: #5f9ea0;
-            --accent-color: #e8491d;
-            --bg-color: #f0f8ff;
-            --text-color: #333;
-            --light-bg: #e6f3ff;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .section {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: var(--primary-color);
-        }
-        .exercise {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: var(--light-bg);
-            border-radius: 5px;
-        }
-        input[type="number"], input[type="text"] {
-            width: 70px;
-            padding: 5px;
-            margin: 0 5px;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: var(--secondary-color);
-        }
-        #result {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        
-    </style>
-</head>
 <body>
     <header>
         <div class="container">
@@ -87,8 +28,8 @@
         </div>
     </header>
 
-    <center><h1><span class="highlight">Math Lesson 2:</span></h1></center>
-    <center><h1>Fractions and Decimals</h1></center>
+    <h1 class="text-center"><span class="highlight">Math Lesson 2:<br></span> Fractions and Decimals</h1>
+
 
 
     <div class="container">
@@ -145,6 +86,13 @@
                 <div id="addResult"></div>
             </div>
         </div>
+
+        <div class="section">
+            <h2>AI Interaction</h2>
+            <input type="text" id="userPrompt" placeholder="Ask AI anything...">
+            <button onclick="askAI()" class="btn">Ask AI</button>
+            <div id="aiResponse"></div>
+        </div>
     </div>
 
     <footer>
@@ -190,6 +138,19 @@
             } else {
                 document.getElementById('addResult').innerHTML = "Not quite. 1/4 (0.25) + 0.5 = 0.75";
             }
+        }
+
+        function askAI() {
+            const userPrompt = document.getElementById('userPrompt').value;
+            const responseDiv = document.getElementById('aiResponse');
+
+            if (!userPrompt) {
+                responseDiv.innerHTML = "Please enter a prompt.";
+                return;
+            }
+
+            // Simulate AI response
+            responseDiv.innerHTML = "I apologize, but the AI service is currently unavailable. Please try again later or contact support if the issue persists.";
         }
     </script>
 </body>
