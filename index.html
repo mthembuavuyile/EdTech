@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vylex Nexys - AI-Driven EdTech Platform</title>
+    
+    <!-- Link Preview Meta Tags -->
+    <meta property="og:title" content="Vylex Nexys - AI-Driven EdTech Platform">
+    <meta property="og:description" content="Revolutionize your learning experience with Vylex Nexys, the cutting-edge AI-powered educational technology platform.">
+    <meta property="og:image" content="https://www.vylexnexys.com/og-image.jpg">
+    <meta property="og:url" content="https://www.vylexnexys.com">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vylex Nexys is an innovative AI-driven EdTech platform that personalizes learning experiences, adapts to individual needs, and fosters engagement through interactive content.">
+    <meta name="keywords" content="AI education, EdTech, personalized learning, adaptive learning, interactive education, Vylex Nexys">
+    <meta name="author" content="Vylex Nexys">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        :root {
+            --primary-color: #4682b4;
+            --secondary-color: #5f9ea0;
+            --accent-color: #e8491d;
+            --bg-color: #f0f8ff;
+            --text-color: #333;
+            --light-bg: #e6f3ff;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 1rem 0;
+            position: relative;
+        }
+        #branding {
+            display: flex;
+            align-items: center;
+        }
+        #branding h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            padding: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px;
+            transition: all 0.3s ease;
+            background-position: center;
+        }
+        #showcase {
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/AI-learning-background.jpg);
+            text-align: center;
+            color: #ffffff;
+            padding: 100px 0;
+        }
+        #showcase h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        #showcase p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+        section {
+            padding: 40px 0;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .ai-tools {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .ai-tool {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .ai-tool:hover {
+            transform: translateY(-5px);
+        }
+        .ai-tool h4 {
+            color: var(--primary-color);
+        }
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .coming-soon-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .coming-soon-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .coming-soon-content p {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .burger {
+                display: block;
+                z-index: 2;
+            }
+            nav ul {
+                position: fixed;
+                right: -100%;
+                height: 100vh;
+                top: 0;
+                background-color: var(--primary-color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transition: right 0.5s ease-in;
+                padding-top: 60px;
+            }
+            nav ul li {
+                opacity: 0;
+                margin: 15px 0;
+            }
+            .nav-active {
+                right: 0;
+            }
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+            .toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .toggle .line2 {
+                opacity: 0;
+            }
+            .toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            .ai-tool {
+                width: calc(70% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .ai-tool {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="coming-soon-overlay">
+        <div class="coming-soon-content">
+            <h2>Coming Soon</h2>
+            <p>Vylex Nexys EdTech is under development. This is just a teaser of what's to come!</p>
+            <button class="btn" onclick="closeOverlay()">Explore Teaser</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div id="branding">
+                    <h1><span class="highlight">Vylex Nexys</span> EdTech</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="https://avuyilemthembu.co.za/Artificial-Intelligence.html">AI Tools</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>AI-Driven Education for All</h1>
+            <p>Personalized learning paths in STEM subjects, accessible anytime, anywhere.</p>
+            <a href="#" class="btn" onclick="startLearning()">Start Learning</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="card">
+            <h2>About Vylex Nexys EdTech</h2>
+            <p>Our platform leverages AI to create tailored learning experiences for students in under-resourced areas, focusing on critical STEM subjects. Join us in revolutionizing education for everyone.</p>
+            <p><a href="about.html" class="btn">More about us</a></p>
+        </div>
+    </section>
+
+    <section id="courses" class="container">
+        <div class="card">
+            <h2>Explore Our Courses</h2>
+            <p>We offer interactive lessons and quizzes in Mathematics, Science, Engineering, and Technology, designed to help students excel at their own pace.</p>
+            <a href="courses.html" class="btn">View Courses</a>
+        </div>
+    </section>
+
+    <section id="ai-tools" class="container">
+        <h2>Explore AI Tools</h2>
+        <p><a href="https://avuyilemthembu.co.za/Artificial-Intelligence.html" class="btn">Discover our full range of AI tools</a></p>
+
+        <div class="ai-tools">
+            <div class="ai-tool">
+                <h4>ChatGPT (OpenAI)</h4>
+                <p>A powerful language model for natural conversations and text generation.</p>
+            </div>
+            <div class="ai-tool">
+                <h4>Claude (Anthropic)</h4>
+                <p>An AI assistant focused on safety and beneficial outcomes.</p>
+            </div>
+            <div class="ai-tool">
+                <h4>Gemini (Google DeepMind)</h4>
+                <p>A versatile AI model with multimodal capabilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to collaborate? Reach out to us!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2024 Vylex Nexys. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function startLearning() {
+            alert("Welcome to Vylex Nexys EdTech! Your personalized learning journey is about to begin.");
+            window.location.href = 'courses.html';
+        }
+
+        function closeOverlay() {
+            document.querySelector('.coming-soon-overlay').style.display = 'none';
+        }
+
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (event) => {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnBurger = burger.contains(event.target);
+
+                if (!isClickInsideNav && !isClickOnBurger && nav.classList.contains('nav-active')) {
+                    nav.classList.remove('nav-active');
+                    burger.classList.remove('toggle');
+                    navLinks.forEach((link) => {
+                        link.style.animation = '';
+                    });
+                }
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+</html>
