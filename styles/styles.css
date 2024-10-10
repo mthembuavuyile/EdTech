@@ -271,10 +271,21 @@ footer {
     margin-top: 40px;
 }
 
-footer a {
+footer nav a {
     color: var(--accent-color);
     text-decoration: none;
+    margin: 0 10px;
 }
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
 
 /* For mobile devices */
 @media (max-width: 768px) {
