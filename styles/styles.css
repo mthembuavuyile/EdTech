@@ -111,7 +111,7 @@ nav ul li a:hover {
 /* Showcase */
 #showcase {
     min-height: 400px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/AI-learning-background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/AI-learning-background.jpg);
     text-align: center;
     color: #ffffff;
     padding: 100px 0;
